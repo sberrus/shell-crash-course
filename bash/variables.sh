@@ -23,3 +23,12 @@ NOMBRE=samuel
 APELLIDO="berrus corvo"
 
 echo "Hola $NOMBRE $APELLIDO"
+
+# SCOPE
+# En bash también tenemos el concepto de scope, Pudiendo darle scope a una variable dentro de una funcion para que esta no mute variables de ambito global.
+VARIABLE_GLOBAL="HOLA MUNDO"
+
+funcionfuncion(){
+    local VARIABLE_LOCAL="HOLA LOCALIDAD" # Esta variable solo puede ser consultada y modificada desde dentro de la función.
+}
+
